@@ -32,7 +32,7 @@ Selecione uma opção para continuar (Clique no item):
 /dataclima Ver a data e clima de hoje
 /alemenezes Ver mais do trabalho de menezesalexandre_dev
 Selecione uma das opções disponíveis acima"""
-    bot.send_message(mensagem.chat.id, texto)
+    bot.reply_to(mensagem, texto)
 
 
 bot.polling()

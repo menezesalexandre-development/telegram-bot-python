@@ -1,13 +1,14 @@
 import telebot
 import random
 import requests
+import os
 import time
 from datetime import date
 
 data_atual = date.today()
 data_ddmmyyyy = f"{data_atual.day}/{data_atual.month}/{data_atual.year}"
 
-chaveAPI = "6706522782:AAGZDff-S-L2QNsHqzGgohORMCN6EGNsnAY"
+chaveAPI = os.environ['telegramChaveAPI']
 bot = telebot.TeleBot(chaveAPI)
 
 
@@ -43,7 +44,7 @@ LinkedIn: https://encurtador.com.br/bkqt2"""
 
 
 def verificar_clima(mensagem):
-    chave_api_pyowm = "e4301b8a9bd9d49f970948fbd02f5b5f"
+    chave_api_pyowm = os.environ["openWeatherChaveAPI"]
     nome_cidade = mensagem.text
     nome_cidade += ', BR'
     print(nome_cidade)
@@ -58,7 +59,7 @@ def verificar_clima(mensagem):
 
 @bot.message_handler(func=verificar_clima)
 def responder_clima(mensagem):
-    chave_api_pyowm = "e4301b8a9bd9d49f970948fbd02f5b5f"
+    chave_api_pyowm = os.environ["openWeatherChaveAPI"]
     nome_cidade = mensagem.text
     nome_cidade += ', BR'
     print(nome_cidade)

@@ -2,6 +2,8 @@
 
 ### 🤖 Bem-vindo ao [Bot de Telegram do menezesalexandre_dev](https://t.me/AlemenezesBot)! Este bot tem funcionalidades muito legais, além das que serão adicionadas posteriormente:
 
+### Link: [menezesalexandre_telegrambot](https://t.me/AlemenezesBot)
+
 🌦️ Previsão do Tempo /data_clima: 
 <br>Informe o nome de qualquer cidade do Brasil que você deseja saber a previsão do tempo e nosso bot fornecerá as informações meteorológicas atualizadas.
 <br>As informações meteorológicas são fornecidas a partir da API do OpenWeatherMap, que integrada ao bot do Telegram por meio de um código Python, exibe o tempo e o clima de qualquer cidade do Brasil.

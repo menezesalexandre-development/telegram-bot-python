@@ -2,11 +2,7 @@ import telebot
 import random
 import requests
 import time
-from cryptography.fernet import Fernet
 from datetime import date
-
-key = Fernet.generate_key()
-f = Fernet(key)
 
 data_atual = date.today()
 data_ddmmyyyy = f"{data_atual.day}/{data_atual.month}/{data_atual.year}"

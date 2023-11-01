@@ -1,6 +1,6 @@
 import requests
 
-chave_api_pyowm = "e4301b8a9bd9d49f970948fbd02f5b5f"
+chave_api_pyowm = os.environ["openWeatherChaveAPI"]
 nome_cidade = str(input('Digite o nome da Cidade para ver a previsão do tempo: '))
 nome_cidade += ', BR'
 link = f"https://api.openweathermap.org/data/2.5/weather?q={nome_cidade}&appid={chave_api_pyowm}&lang=pt_br"

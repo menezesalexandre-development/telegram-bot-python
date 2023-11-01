@@ -13,7 +13,7 @@ def run_telegrambot():
     data_atual = date.today()
     data_ddmmyyyy = f"{data_atual.day}/{data_atual.month}/{data_atual.year}"
 
-    chaveAPI = os.environ['telegramChaveAPI']
+    chaveAPI = "6706522782:AAGZDff-S-L2QNsHqzGgohORMCN6EGNsnAY"
     bot = telebot.TeleBot(chaveAPI)
 
 
@@ -49,7 +49,7 @@ def run_telegrambot():
 
 
     def verificar_clima(mensagem):
-        chave_api_pyowm = os.environ["openWeatherChaveAPI"]
+        chave_api_pyowm = "e4301b8a9bd9d49f970948fbd02f5b5f"
         nome_cidade = mensagem.text
         nome_cidade += ', BR'
         print(nome_cidade)

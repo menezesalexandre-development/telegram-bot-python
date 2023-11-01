@@ -1,3 +1,6 @@
-gunicorn==20.1.0
-pyTelegramBotAPI==4.14.0
-requests==2.31.0
+datetime
+pyTelegramBotAPI
+random
+requests
+os
+telebot

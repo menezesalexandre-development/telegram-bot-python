@@ -51,7 +51,7 @@ def verificar_clima(mensagem):
 
     requisicao_pyowm = requests.get(link)
     requisicao_dicionario_pyowm = requisicao_pyowm.json()
-    print(requisicao_dicionario_pyowm['cod'])
+    print(f'Requisição OpenWeather: {requisicao_dicionario_pyowm["cod"]}')
     if requisicao_dicionario_pyowm['cod'] == 200:
        return True
 

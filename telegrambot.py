@@ -14,6 +14,7 @@ bot = telebot.TeleBot(chaveAPI)
 
 @bot.message_handler(commands=["biscoito_ou_bolacha"])
 def biscoito_ou_bolacha(mensagem):
+    print(mensagem)
     biscoito_e_bolacha = ['Biscoito', 'Bolacha']
     text_biscoito_e_bolacha = f"""
     É {random.choice(biscoito_e_bolacha)}!"""
@@ -38,8 +39,8 @@ def alemenezes(mensagem):
     Saiba mais sobre o meu trabalho!
 menezesalexandre_dev 👨‍💻 Programador Full-Stack
 HTML | CSS | JavaScript | Python | MySQL | Git
-GitHub: https://encurtador.com.br/qGHO3
-LinkedIn: https://encurtador.com.br/bkqt2"""
+GitHub: http://bit.ly/github_menezesalexandre
+LinkedIn: https://bit.ly/linkedin_menezesalexandre"""
     bot.send_message(mensagem.chat.id, texto_alemenezes)
 
 

@@ -13,7 +13,7 @@ def run_telegrambot():
     data_atual = date.today()
     data_ddmmyyyy = f"{data_atual.day}/{data_atual.month}/{data_atual.year}"
 
-    chaveAPI = "6706522782:AAGZDff-S-L2QNsHqzGgohORMCN6EGNsnAY"
+    chaveAPI = os.environ['telegramBotAPI']
     bot = telebot.TeleBot(chaveAPI)
 
 

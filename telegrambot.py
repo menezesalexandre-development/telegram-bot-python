@@ -1,7 +1,6 @@
 import telebot
 import random
 import requests
-import os
 import time
 from datetime import date
 
@@ -19,7 +18,7 @@ def biscoito_ou_bolacha(mensagem):
     text_biscoito_e_bolacha = f"""
     É {random.choice(biscoito_e_bolacha)}!"""
     bot.send_message(mensagem.chat.id, text_biscoito_e_bolacha)
-    time.sleep(0.5)
+    time.sleep(0.2)
     text_biscoito_e_bolacha2 = """
     Tô de brinks, escolhi aleatoriamente"""
     bot.send_message(mensagem.chat.id, text_biscoito_e_bolacha2)
@@ -55,7 +54,7 @@ def verificar_clima(mensagem):
     requisicao_dicionario_pyowm = requisicao_pyowm.json()
     print(f'Requisição OpenWeather: {requisicao_dicionario_pyowm["cod"]}')
     if requisicao_dicionario_pyowm['cod'] == 200:
-       return True
+        return True
 
 
 @bot.message_handler(func=verificar_clima)
@@ -83,9 +82,9 @@ Visibilidade: {(visibilidade_pyowm / 1000):.0f}km"""
     bot.send_message(mensagem.chat.id, text_clima)
 
 
-#MENSAGENS GERAIS:
+# MENSAGENS GERAIS:
 def verificar_geral(mensagem):
-   return True
+    return True
 
 
 @bot.message_handler(func=verificar_geral)

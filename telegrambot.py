@@ -1,14 +1,21 @@
 import telebot
+import os
 import random
 import requests
 import time
 from datetime import date
+from dotenv import load_dotenv
+from pathlib import Path
+
+envPath = Path('.', '.env')
+load_dotenv(envPath)
 
 data_atual = date.today()
 data_ddmmyyyy = f"{data_atual.day}/{data_atual.month}/{data_atual.year}"
 
-chaveAPI = '6706522782:AAGZDff-S-L2QNsHqzGgohORMCN6EGNsnAY'
-bot = telebot.TeleBot(chaveAPI)
+telegramChaveAPI = os.getenv("chaveApiTelegram")
+print(telegramChaveAPI)
+bot = telebot.TeleBot(telegramChaveAPI)
 
 
 @bot.message_handler(commands=["biscoito_ou_bolacha"])

@@ -14,7 +14,6 @@ data_atual = date.today()
 data_ddmmyyyy = f"{data_atual.day}/{data_atual.month}/{data_atual.year}"
 
 telegramChaveAPI = os.getenv("chaveApiTelegram")
-print(telegramChaveAPI)
 bot = telebot.TeleBot(telegramChaveAPI)
 
 
@@ -54,7 +53,6 @@ def verificar_clima(mensagem):
     chave_api_pyowm = 'e4301b8a9bd9d49f970948fbd02f5b5f'
     nome_cidade = mensagem.text
     nome_cidade += ', BR'
-    print(nome_cidade)
     link = f"https://api.openweathermap.org/data/2.5/weather?q={nome_cidade}&appid={chave_api_pyowm}&lang=pt_br"
 
     requisicao_pyowm = requests.get(link)
@@ -69,12 +67,10 @@ def responder_clima(mensagem):
     chave_api_pyowm = 'e4301b8a9bd9d49f970948fbd02f5b5f'
     nome_cidade = mensagem.text
     nome_cidade += ', BR'
-    print(nome_cidade)
     link = f"https://api.openweathermap.org/data/2.5/weather?q={nome_cidade}&appid={chave_api_pyowm}&lang=pt_br"
 
     requisicao_pyowm = requests.get(link)
     requisicao_dicionario_pyowm = requisicao_pyowm.json()
-    print(requisicao_dicionario_pyowm['cod'])
     cidade_pyowm = requisicao_dicionario_pyowm['name']
     descricao_pyowm = requisicao_dicionario_pyowm['weather'][0]['description']
     temperatura_pyowm = requisicao_dicionario_pyowm['main']['temp']

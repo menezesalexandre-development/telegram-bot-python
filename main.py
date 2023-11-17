@@ -6,6 +6,9 @@ import time
 from datetime import date
 from dotenv import load_dotenv
 from pathlib import Path
+from keep_alive import keep_alive
+
+keep_alive()
 
 envPath = Path('.', '.env')
 load_dotenv(envPath)
@@ -103,7 +106,7 @@ Selecione uma das opções disponíveis acima"""
     bot.reply_to(mensagem, texto)
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     while True:
         try:
             bot.polling(non_stop=True, interval=0)

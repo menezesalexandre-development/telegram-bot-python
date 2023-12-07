@@ -1,5 +1,12 @@
 <h1 align="center">menezesalexandre Telegram Bot<img align="center" alt="Python" height="80" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">  <img align="center" alt="Telegram" height="80" width="80" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"></h1> 
 
+<div align="center">
+
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Logo">
+  <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Logo">
+  
+</div>
+
 ### 🤖 Bem-vindo ao [Bot de Telegram do menezesalexandre_dev](https://t.me/AlemenezesBot)! Este bot tem funcionalidades muito legais, além das que serão adicionadas posteriormente:
 
 ### Link: [menezesalexandre_telegrambot](https://t.me/AlemenezesBot)

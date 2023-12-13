@@ -11,6 +11,14 @@
 
 ### Link: [menezesalexandre_telegrambot](https://t.me/AlemenezesBot)
 
+&nbsp;
+
+<h3 align="center">⚠️❗ Instrução para utilizar o Bot: ❗⚠️ </h3>
+
+Enquanto não se resolve os problemas com o deploy da aplicação, é necessário fazer um fork deste repositório e executar o arquivo ` main.py ` para utilizar e testar este Bot
+
+&nbsp;
+
 🌦️ Previsão do Tempo /data_clima: 
 <br>Informe o nome de qualquer cidade do Brasil que você deseja saber a previsão do tempo e nosso bot fornecerá as informações meteorológicas atualizadas.
 <br>As informações meteorológicas são fornecidas a partir da API do OpenWeatherMap, que integrada ao bot do Telegram por meio de um código Python, exibe o tempo e o clima de qualquer cidade do Brasil.

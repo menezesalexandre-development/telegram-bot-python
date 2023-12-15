@@ -13,7 +13,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def start_bot():
-
     keep_alive()
 
     envPath = Path('.', '.env')
@@ -24,6 +23,7 @@ def start_bot():
 
     telegramChaveAPI = os.getenv("chaveApiTelegram")
     bot = telebot.TeleBot(telegramChaveAPI)
+
 
     @bot.message_handler(commands=["biscoito_ou_bolacha"])
     def biscoito_ou_bolacha(mensagem):
@@ -36,6 +36,7 @@ def start_bot():
         text_biscoito_e_bolacha2 = """
         Tô de brinks, escolhi aleatoriamente"""
         bot.send_message(mensagem.chat.id, text_biscoito_e_bolacha2)
+
 
     @bot.message_handler(commands=["data_clima"])
     def data_clima(mensagem):
@@ -91,9 +92,11 @@ def start_bot():
     Visibilidade: {(visibilidade_pyowm / 1000):.0f}km"""
         bot.send_message(mensagem.chat.id, text_clima)
 
+
     # MENSAGENS GERAIS:
     def verificar_geral(mensagem):
         return True
+
 
     @bot.message_handler(func=verificar_geral)
     def responder_geral(mensagem):
@@ -106,6 +109,7 @@ def start_bot():
     /alemenezes Ver mais do trabalho de menezesalexandre_dev
     Selecione uma das opções disponíveis acima"""
         bot.reply_to(mensagem, texto)
+
 
     if __name__ == '__main__':
         while True:
